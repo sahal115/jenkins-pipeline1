@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('clone') {
+        stage('CodeScan') {
             steps {
                 sh 'trivy --version'
                 
@@ -10,9 +10,9 @@ pipeline {
             }
         }
 
-        stage('test ') {
+        stage('dockerImageBuild') {
             steps {
-                sh 'docker --v'
+                sh 'docker -v'
             }
         }
 
