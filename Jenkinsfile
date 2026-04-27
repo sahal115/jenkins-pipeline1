@@ -5,6 +5,7 @@ pipeline {
         stage('CodeScan') {
             steps{
                 sh 'trivy fs . severity HIGH -o result.html'
+                sh 'cat result.html'
                 
                 
             }
