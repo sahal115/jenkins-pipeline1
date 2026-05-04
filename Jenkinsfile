@@ -3,23 +3,19 @@ pipeline {
 
     stages {
         stage('CodeScan') {
-            steps{
+            steps {
                 sh 'trivy --version'
-                
-                
-                
-                
             }
         }
 
         stage('dockerImageBuild') {
-            steps{
+            steps {
                 sh 'docker -v'
             }
         }
 
         stage('pushImage') {
-            steps{
+            steps {
                 sh 'docker ps'
             }
         }
