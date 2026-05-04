@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('CodeScan') {
             steps {
-                sh 'export PATH=$PATH:/usr/local/bin && trivy --version'
+                sh '''
+            export PATH=$PATH:/usr/local/bin
+            trivy --version
+        '''
             }
         }
 
